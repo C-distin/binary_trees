@@ -9,10 +9,8 @@
  */
 binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value)
 {
-	binary_tree_t *new_node;
+	binary_tree_t *new_node = malloc(sizeof(binary_tree_t));
 	binary_tree_t *temp;
-
-	new_node = malloc(sizeof(binary_tree_t));
 
 	if (!parent || !new_node)
 		return (NULL);
