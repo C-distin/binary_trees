@@ -23,50 +23,31 @@ typedef struct binary_tree_s
 	struct binary_tree_s *right;
 } binary_tree_t;
 typedef struct binary_tree_s binary_tree_t;
-
-/* Binary Search Tree */
 typedef struct binary_tree_s bst_t;
-
-/* AVL Tree */
 typedef struct binary_tree_s avl_t;
-
-/* Max Binary Heap */
 typedef struct binary_tree_s heap_t;
 
 /* print binary tree */
 void binary_tree_print(const binary_tree_t *);
 
-/* create new binary tree node */
+/* function prototypes */
+
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
-
-/* insert new left child node */
 binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value);
-
-/* insert new right child node */
 binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value);
-
-/* delete entire binary tree */
 void binary_tree_delete(binary_tree_t *tree);
-
-/* check if binary tree node is a leaf */
 int binary_tree_is_leaf(const binary_tree_t *node);
-
-/* check if binary tree node is a root */
 int binary_tree_is_root(const binary_tree_t *node);
-
-/* function that goes through a binary tree using pre-order traversal */
 void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int));
-
-/* function that goes through a binary tree using in-order traversal */
 void binary_tree_inorder(const binary_tree_t *tree, void (*func)(int));
-
-/* function that goes through a binary tree using post-order traversal */
 void binary_tree_postorder(const binary_tree_t *tree, void (*func)(int));
-
-/* function that measures the height of a binary tree */
 size_t binary_tree_height(const binary_tree_t *tree);
-
-/* function that measures the depth of a node in a binary tree */
 size_t binary_tree_depth(const binary_tree_t *tree);
+size_t binary_tree_size(const binary_tree_t *tree);
+size_t binary_tree_leaves(const binary_tree_t *tree);
+size_t binary_tree_nodes(const binary_tree_t *tree);
+int binary_tree_balance(const binary_tree_t *tree);
+int binary_tree_is_full(const binary_tree_t *tree);
+int binary_tree_is_perfect(const binary_tree_t *tree);
 
 #endif /* _BINARY_TREES_H_ */
